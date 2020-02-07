@@ -1,7 +1,9 @@
 package com.bdilib.smeserviceplatform.mapper;
 
 import com.bdilib.smeserviceplatform.dao.GovernmentInfo;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface GovernmentInfoMapper {
 
     /**

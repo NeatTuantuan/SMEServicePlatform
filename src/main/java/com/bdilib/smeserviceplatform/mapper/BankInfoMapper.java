@@ -1,7 +1,11 @@
 package com.bdilib.smeserviceplatform.mapper;
 
 import com.bdilib.smeserviceplatform.dao.BankInfo;
+import com.bdilib.smeserviceplatform.dao.EnterpriseInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 @Mapper
 public interface BankInfoMapper {
@@ -37,4 +41,9 @@ public interface BankInfoMapper {
      * @mbggenerated Mon Jan 13 19:14:30 CST 2020
      */
     int updateByPrimaryKey(BankInfo record);
+
+    Integer selectfkUserIdByBankName(@Param("bankName") String bankName);
+
+    Integer selectfkUserIdByBankNameAndBankId(@Param("bankName") String bankName,@Param("bankId") Integer bankId);
+
 }

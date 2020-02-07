@@ -1,20 +1,17 @@
-package com.bdilib.smeserviceplatform.dao;
+package com.bdilib.smeserviceplatform.vo;
 
 import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * @author lr
+ * @Package com.bdilib.smeserviceplatform.vo
+ * @date 2020/2/3 10:58
+ * @description 企业信息VO
+ */
 @Data
-public class EnterpriseInfo {
-    /**
-     *32位的自增字段，唯一标识一条记录
-     */
-    private Integer id;
-
-    /**
-     *用户id
-     */
-    private Integer fkUserId;
+public class EnterpriseInfoVO {
 
     /**
      *统一社会信用代码，18位阿拉伯数字或大写英文字母
@@ -49,7 +46,7 @@ public class EnterpriseInfo {
      * 3-空港新城
      * 4-秦汉新城
      */
-    private Byte region;
+    private Integer region;
 
     /**
      *法定代表人手机号码
@@ -91,32 +88,5 @@ public class EnterpriseInfo {
      */
     private String businessScope;
 
-    /**
-     * 信用等级
-     */
-    private Integer creditRate;
 
-    public Integer getCreditRate() {
-        return creditRate;
-    }
-
-    public void setCreditRate(Integer creditRate) {
-        this.creditRate = creditRate;
-    }
-
-    public String getSocialCode() {
-        return socialCode;
-    }
-
-    public void setSocialCode(String socialCode) {
-        this.socialCode = socialCode;
-    }
-
-    public String getEnterpriseName() {
-        return enterpriseName;
-    }
-
-    public void setEnterpriseName(String enterpriseName) {
-        this.enterpriseName = enterpriseName;
-    }
 }

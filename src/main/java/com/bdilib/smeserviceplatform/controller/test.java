@@ -22,12 +22,12 @@ public class test {
     @GetMapping(value = "/test")
     public int test(){
         BankInfo bankInfo = new BankInfo();
-        bankInfo.setBankName("test");
-        bankInfo.setBankId(1);
-        bankInfo.setFkUserId(1);
-        bankInfo.setRegion(1);
-        bankInfo.setContactName("test");
-        bankInfo.setContactPhone("test");
+        bankInfo.setBankName("test3");
+        bankInfo.setBankId(3);
+        bankInfo.setFkUserId(3);
+        bankInfo.setRegion(3);
+        bankInfo.setContactName("test3");
+        bankInfo.setContactPhone("test3");
         return bankInfoMapper.insert(bankInfo);
     }
 

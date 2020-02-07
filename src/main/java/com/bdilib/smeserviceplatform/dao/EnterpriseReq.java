@@ -3,7 +3,7 @@ package com.bdilib.smeserviceplatform.dao;
 import lombok.Data;
 
 @Data
-public class EnterpriseReq {
+public class EnterpriseReq{
     /**
      *32位的自增字段，唯一标识一条记录
      */
@@ -23,7 +23,7 @@ public class EnterpriseReq {
      * 4-1000万及以下
      * 5-1000万以上
      */
-    private Byte loanLimit;
+    private Integer loanLimit;
 
     /**
      *利率下限（单位%）
@@ -48,7 +48,7 @@ public class EnterpriseReq {
      * 3-信用
      * 4-实际控制人夫妇提供个人连带担保
      */
-    private Byte guaranteeMode;
+    private Integer guaranteeMode;
 
     /**
      *融资用途
@@ -59,12 +59,12 @@ public class EnterpriseReq {
      * 4-土地整理贷款
      * 5-融资租赁贷款
      */
-    private Byte financingPurposes;
+    private Integer financingPurposes;
 
     /**
      *项目情况
      */
-    private Byte projectSituation;
+    private String projectSituation;
 
     /**
      *备注

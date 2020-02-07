@@ -1,7 +1,12 @@
 package com.bdilib.smeserviceplatform.mapper;
 
 import com.bdilib.smeserviceplatform.dao.FinancialProduct;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+@Mapper
 public interface FinancialProductMapper {
 
 
@@ -45,4 +50,8 @@ public interface FinancialProductMapper {
      * @mbggenerated Mon Jan 13 19:14:30 CST 2020
      */
     int updateByPrimaryKey(FinancialProduct record);
+
+    List<FinancialProduct> selectByfkUserId(@Param("fkUserId") Integer userId);
+
+    Integer selectIdByProductName(@Param("productName") String productName);
 }

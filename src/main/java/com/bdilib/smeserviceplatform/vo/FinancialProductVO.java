@@ -1,131 +1,148 @@
-package com.bdilib.smeserviceplatform.dao;
+package com.bdilib.smeserviceplatform.vo;
 
-import io.swagger.models.auth.In;
 import lombok.Data;
 
+/**
+ * @author lr
+ * @Package com.bdilib.smeserviceplatform.vo
+ * @date 2020/2/2 12:04
+ * @description 金融产品发布相关信息
+ */
 @Data
-public class FinancialProduct{
-    /**
-     * 32位的自增字段，唯一标识一条记录
-     */
-    private int id;
+public class FinancialProductVO {
+    private String productName;
     /**
      * 金融产品名称
      */
-    private String productName;
+    private  int fkBankId;
     /**
-     *用户id
+     * 银行行号
      */
-    private Integer fkUserId;
 
+    /**
+     *
+     */
+    private String bankName;
+    /**
+     *银行名称
+     */
+    private int institutionType;
     /**
      *机构类型：
+     *
      * 0-银行
+     *
      * 1-担保公司
+     *
      * 2-保险公司
+     *
      * 3-交易所
+     *
      * 4-金融租赁
+     *
      * 5-转贷公司
+     *
      * 6-服务公司
      */
-    private Integer institutionType;
-
+    private double rateLowerLimit;
     /**
      *利率下限（单位%）
      */
-    private Double rateLowerLimit;
-
+    private double rateUpperLimit;
     /**
      *利率上限（单位%）
      */
-    private Double rateUpperLimit;
-
+    private int generality;
     /**
      *通用产品
+     *
      * 0-非通用产品
+     *
      * 1-通用产品
      */
-    private Integer generality;
-
+    private int internetLoanType;
     /**
      *网贷直联
+     *
      * 0-非网贷直联
+     *
      * 1-网贷直联
      */
-    private Integer internetLoanType;
-
+    private int productProperties;
     /**
      *政策性产品
+     *
      * 0-非政策性产品
+     *
      * 1-政策性产品
      */
-    private Integer productProperties;
-
+    private int paymentType;
     /**
      *支付方式
+     *
      * 0-非人民币
+     *
      * 1-人民币
      */
-    private Integer paymentType;
-
+    private int loanType;
     /**
      *贷款类别:
+     *
      * 0-经营贷款
+     *
      * 1-流动资金贷款
+     *
      * 2-周转贷款
      */
-    private Integer loanType;
-
+    private int loanLimit;
     /**
      *贷款额度（单位：万元）
+     *
      * 0-100万及以下
+     *
      * 1-200万及以下
+     *
      * 2-300万及以下
+     *
      * 3-500万及以下
+     *
      * 4-1000万及以下
+     *
      * 5-1000万以上
      */
-    private Integer loanLimit;
-
+    private int loanPeriod;
     /**
      *贷款期限（单位：月）
      */
-    private Integer loanPeriod;
-
+    private int guaranteeMode;
     /**
      *担保方式:
+     *
      * 0-抵押
+     *
      * 1-信保基金
+     *
      * 2-一般保证
+     *
      * 3-信用
+     *
      * 4-实际控制人夫妇提供个人连带担保
      */
-    private Integer guaranteeMode;
-
+    private String useArea;
     /**
      *使用区域
      */
-    private String useArea;
-
-    /**
-     *说明
-     */
     private String description;
 
-    public Integer getFkUserId() {
-        return fkUserId;
+/**
+ *说明
+ */
+    public String getBankName() {
+        return bankName;
     }
 
-    public void setFkUserId(Integer fkUserId) {
-        this.fkUserId = fkUserId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
     }
 
     public String getProductName() {
@@ -136,91 +153,99 @@ public class FinancialProduct{
         this.productName = productName;
     }
 
-    public Integer getInstitutionType() {
+    public int getFkBankId() {
+        return fkBankId;
+    }
+
+    public void setFkBankId(int fkBankId) {
+        this.fkBankId = fkBankId;
+    }
+
+    public int getInstitutionType() {
         return institutionType;
     }
 
-    public void setInstitutionType(Integer institutionType) {
+    public void setInstitutionType(int institutionType) {
         this.institutionType = institutionType;
     }
 
-    public Double getRateLowerLimit() {
+    public double getRateLowerLimit() {
         return rateLowerLimit;
     }
 
-    public void setRateLowerLimit(Double rateLowerLimit) {
+    public void setRateLowerLimit(double rateLowerLimit) {
         this.rateLowerLimit = rateLowerLimit;
     }
 
-    public Double getRateUpperLimit() {
+    public double getRateUpperLimit() {
         return rateUpperLimit;
     }
 
-    public void setRateUpperLimit(Double rateUpperLimit) {
+    public void setRateUpperLimit(double rateUpperLimit) {
         this.rateUpperLimit = rateUpperLimit;
     }
 
-    public Integer getGenerality() {
+    public int getGenerality() {
         return generality;
     }
 
-    public void setGenerality(Integer generality) {
+    public void setGenerality(int generality) {
         this.generality = generality;
     }
 
-    public Integer getInternetLoanType() {
+    public int getInternetLoanType() {
         return internetLoanType;
     }
 
-    public void setInternetLoanType(Integer internetLoanType) {
+    public void setInternetLoanType(int internetLoanType) {
         this.internetLoanType = internetLoanType;
     }
 
-    public Integer getProductProperties() {
+    public int getProductProperties() {
         return productProperties;
     }
 
-    public void setProductProperties(Integer productProperties) {
+    public void setProductProperties(int productProperties) {
         this.productProperties = productProperties;
     }
 
-    public Integer getPaymentType() {
+    public int getPaymentType() {
         return paymentType;
     }
 
-    public void setPaymentType(Integer paymentType) {
+    public void setPaymentType(int paymentType) {
         this.paymentType = paymentType;
     }
 
-    public Integer getLoanType() {
+    public int getLoanType() {
         return loanType;
     }
 
-    public void setLoanType(Integer loanType) {
+    public void setLoanType(int loanType) {
         this.loanType = loanType;
     }
 
-    public Integer getLoanLimit() {
+    public int getLoanLimit() {
         return loanLimit;
     }
 
-    public void setLoanLimit(Integer loanLimit) {
+    public void setLoanLimit(int loanLimit) {
         this.loanLimit = loanLimit;
     }
 
-    public Integer getLoanPeriod() {
+    public int getLoanPeriod() {
         return loanPeriod;
     }
 
-    public void setLoanPeriod(Integer loanPeriod) {
+    public void setLoanPeriod(int loanPeriod) {
         this.loanPeriod = loanPeriod;
     }
 
-    public Integer getGuaranteeMode() {
+    public int getGuaranteeMode() {
         return guaranteeMode;
     }
 
-    public void setGuaranteeMode(Integer guaranteeMode) {
+    public void setGuaranteeMode(int guaranteeMode) {
         this.guaranteeMode = guaranteeMode;
     }
 
